@@ -1,7 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
-		store{
-			contacts: [],
+		store: {
+		  contacts: [],
 		},
 		actions: {
 			fetchContacts: () => {
@@ -9,7 +9,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				.then((response)=> response.json())
 				.then((data) => setStore({contacts: data}))
 				.catch((error) => console.log(error))
-			}
+			},
 			addContact: (name, email, urlphoto, phone) => {
 				fetch("https://playground.4geeks.com/apis/fake/contact", {
 				  method: "POST",
@@ -61,7 +61,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					  },
 					  body: JSON.stringify({
 						address: urlphoto,
-						agenda_slug: "Flavia",
+						agenda_slug: "josef",
 						email: email,
 						full_name: name,
 						phone: phone,
