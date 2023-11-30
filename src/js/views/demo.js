@@ -45,7 +45,7 @@ export const Demo = () => {
           ></input>
           <br />
           <button
-            type="submit"
+            type="button"
             className="submitButton"
             onClick={() => actions.addContact(name, email, urlphoto, phone)}
           >
