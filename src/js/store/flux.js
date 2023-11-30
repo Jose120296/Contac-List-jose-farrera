@@ -1,82 +1,82 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
-		store: {
-		  contacts: [],
+	  store: {
+		contacts: [],
+	  },
+	  actions: {
+		fetchContacts: () => {
+		  fetch("https://playground.4geeks.com/apis/fake/contact/agenda/Jose")
+			.then((response) => response.json())
+			.then((data) => setStore({ contacts: data }))
+			.catch((err) => console.log(err));
 		},
-		actions: {
-			fetchContacts: () => {
-				fetch("https://playground.4geeks.com/apis/fake/contact/agenda/josef")
-				.then((response)=> response.json())
-				.then((data) => setStore({contacts: data}))
-				.catch((error) => console.log(error))
+		addContact: (name, email, urlphoto, phone) => {
+		  fetch("https://playground.4geeks.com/apis/fake/contact", {
+			method: "POST",
+			headers: {
+			  "Content-Type": "application/json",
 			},
-			addContact: (name, email, urlphoto, phone) => {
-				fetch("https://playground.4geeks.com/apis/fake/contact", {
-				  method: "POST",
-				  headers: {
-					"Content-Type": "application/json",
-				  },
-				  body: JSON.stringify({
-					address: urlphoto,
-					agenda_slug: "josef",
-					email: email,
-					full_name: name,
-					phone: phone,
-				  }),
-				})
-					.then((response) => response.json())
-					.then((data) => {
-						console.log(data)
-						getActions().fetchContacts()
-					})
-					.catch((error) => console.log(error))
-				
-				},
-				deleteContact: (id) => {
-					fetch(`https://playground.4geeks.com/apis/fake/contact/${id}`, {
-					  method: "DELETE",
-					})
-					  .then((response) => response.json())
-					  .then(() => {
-						getActions().fetchContacts();
-					  })
-					  .catch((err) => console.log(err));
-				  },
-				  particularContact: async (id) => {
-					try {
-					  const response = await fetch(
-						`https://playground.4geeks.com/apis/fake/contact/${id}`
-					  );
-					  const data = await response.json();
-					  return data;
-					} catch (error) {
-					  console.log(error);
-					}
-				  },
-				  updateContact: (id, name, email, urlphoto, phone) => {
-					fetch(`https://playground.4geeks.com/apis/fake/contact/${id}`, {
-					  method: "PUT",
-					  headers: {
-						"Content-Type": "application/json",
-					  },
-					  body: JSON.stringify({
-						address: urlphoto,
-						agenda_slug: "josef",
-						email: email,
-						full_name: name,
-						phone: phone,
-					  }),
-					})
-					  .then((response) => response.json())
-					  .then(() => {
-						getActions().fetchContacts();
-						window.location.reload();
-					  })
-					  .catch((err) => console.log(err));
-				  },
-				},
-			  };
-			};
-			
-			export default getState;
+			body: JSON.stringify({
+			  address: urlphoto,
+			  agenda_slug: "Jose",
+			  email: email,
+			  full_name: name,
+			  phone: phone,
+			}),
+		  })
+			.then((response) => response.json())
+			.then((data) => {
+			  console.log(data);
+			  getActions().fetchContacts();
+			})
+			.catch((err) => console.log(err));
+		},
+		deleteContact: (id) => {
+		  fetch(`https://playground.4geeks.com/apis/fake/contact/${id}`, {
+			method: "DELETE",
+		  })
+			.then((response) => response.json())
+			.then(() => {
+			  getActions().fetchContacts();
+			})
+			.catch((err) => console.log(err));
+		},
+		particularContact: async (id) => {
+		  try {
+			const response = await fetch(
+			  `https://playground.4geeks.com/apis/fake/contact/${id}`
+			);
+			const data = await response.json();
+			return data;
+		  } catch (error) {
+			console.log(error);
+		  }
+		},
+		updateContact: (id, name, email, urlphoto, phone) => {
+		  fetch(`https://playground.4geeks.com/apis/fake/contact/${id}`, {
+			method: "PUT",
+			headers: {
+			  "Content-Type": "application/json",
+			},
+			body: JSON.stringify({
+			  address: urlphoto,
+			  agenda_slug: "Jose",
+			  email: email,
+			  full_name: name,
+			  phone: phone,
+			}),
+		  })
+			.then((response) => response.json())
+			.then(() => {
+			  getActions().fetchContacts();
+			  window.location.reload();
+			})
+			.catch((err) => console.log(err));
+		},
+	  },
+	};
+  };
+  
+  export default getState;
+  
 			
