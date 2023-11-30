@@ -2,7 +2,7 @@
   height: 25rem;
   width: 30rem;
   border-radius: 20px;
-  background-color: rgba(245, 245, 245, 0.84);
+  background-color: white;
   margin: auto;
 }
 
@@ -20,7 +20,7 @@
 }
 .titleAdd {
   text-align: center;
-  color: rgb(26, 93, 26);
+  color: darkcyan;
   padding-top: 0.75rem;
 }
 form {
@@ -46,22 +46,22 @@ input[type="number"]::-webkit-outer-spin-button {
   margin-top: 0.5rem;
 }
 .formContainer {
-  color: rgb(97, 130, 100);
+  color: darkcyan;
 }
 .submitButton {
   border: none;
   border-radius: 10px;
-  background-color: rgb(122, 157, 84);
+  background-color: #004745;
   color: white;
   width: 20%;
   align-self: center;
 }
 .backContacts {
-  color: rgb(122, 157, 84);
+  color: #117A65 ;
   text-decoration: none;
   align-self: center;
   margin-top: 1rem;
 }
 .backContacts:hover {
-  color: rgb(97, 130, 100);
+  color: #004745 ;
 }

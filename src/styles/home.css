@@ -84,7 +84,7 @@ img {
   height: 20%;
   font-family: "Open Sans", sans-serif;
   font-size: 2rem;
-  color: rgb(67, 83, 52);
+  color: darkcyan;
 }
 
 .buttonsContainer {
@@ -96,7 +96,7 @@ img {
 .icon,
 .fa-regular {
   border: none;
-  color: rgb(122, 157, 84);
+  color: darkcyan ;
   background: transparent;
   font-size: 1.5rem;
 }
