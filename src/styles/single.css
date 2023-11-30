@@ -1,0 +1,83 @@
+.singleContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 25rem;
+  }
+  .cardContainer {
+    width: 38rem;
+    height: 20rem;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.676);
+    font-family: "Open Sans", sans-serif;
+  }
+  @media only screen and (max-width: 600px) {
+    .cardContainer {
+      width: auto;
+      height: auto;
+    }
+  }
+  
+  .imgProfile {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border: 2px double rgb(174, 195, 174);
+  }
+  .row1 {
+    height: 80%;
+    width: 100%;
+    display: flex;
+  }
+  .row2 {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .col1 {
+    height: 100%;
+    width: 40%;
+    padding: 1rem;
+  }
+  .col2 {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    color: rgb(67, 83, 52);
+  }
+  .editButton {
+    border: none;
+    border-radius: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: rgb(122, 157, 84);
+    margin-bottom: 0.75rem;
+  }
+  .editButton:hover {
+    background-color: rgb(97, 130, 100);
+  }
+  
+  .backHome {
+    color: rgb(122, 157, 84);
+    text-decoration: none;
+    margin-bottom: 0.85rem;
+  }
+  .backHome:hover {
+    color: rgb(97, 130, 100);
+  }
+  .editInput {
+    border: none;
+    border-bottom: 1px solid rgb(148, 166, 132);
+    background-color: transparent;
+    width: 85%;
+    box-sizing: border-box;
+    color: rgb(67, 83, 52);
+    margin-left: 0.5rem;
+  }
+  
