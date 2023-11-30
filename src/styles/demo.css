@@ -20,7 +20,7 @@
   }
   .titleAdd {
     text-align: center;
-    color: rgb(26, 93, 26);
+    color: #01D1CB;
     padding-top: 0.75rem;
   }
   form {
@@ -46,23 +46,23 @@
     margin-top: 0.5rem;
   }
   .formContainer {
-    color: rgb(97, 130, 100);
+    color: aqua;
   }
   .submitButton {
     border: none;
     border-radius: 10px;
-    background-color: rgb(122, 157, 84);
+    background-color: teal;
     color: white;
     width: 20%;
     align-self: center;
   }
   .backContacts {
-    color: rgb(122, 157, 84);
+    color: aqua;
     text-decoration: none;
     align-self: center;
     margin-top: 1rem;
   }
   .backContacts:hover {
-    color: rgb(97, 130, 100);
+    color: #04FCF5;
   }
   
