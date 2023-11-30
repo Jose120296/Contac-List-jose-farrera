@@ -1,5 +1,5 @@
 body {
-    background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.shutterstock.com%2Fes%2Fcategory%2Fbackgrounds-textures&psig=AOvVaw26CujEkfTVAuHqpFty_wR-&ust=1701389543753000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCIizzoy46oIDFQAAAAAdAAAAABAE");
+    background-image: url("https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_1280.jpg");
     background-size: cover;
     background-position: center;
   }
@@ -13,14 +13,7 @@ body {
   .container::-webkit-scrollbar {
     width: 8px; /* Cambia el ancho de la barra en navegadores WebKit */
   }
-  
-  .container::-webkit-scrollbar-thumb {
-    background-color: rgb(
-      239,
-      149,
-      149
-    ); /* Cambia el color del 'thumb' (la parte que se arrastra) */
-  }
+    
   
   .container::-webkit-scrollbar-track {
     background-color: rgb(
